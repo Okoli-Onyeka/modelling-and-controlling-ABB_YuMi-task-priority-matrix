@@ -82,7 +82,7 @@ classdef ABB_YUMI<handle
             [~,obj.PrevJacobianOri] = obj.computeJacobianOri(zd,ze);
         end
         
-        % Modified, the jacobian J has been changed to YuMi's positional
+        % Modified, the jacobian J has been changed to YuMi's position
         % jacobian
         function J=computeJacobianPos(obj)
        
@@ -102,7 +102,7 @@ classdef ABB_YUMI<handle
         
         end
         
-       % Modified, the jacobian J has been changed to YuMi's orientational
+       % Modified, the jacobian J has been changed to YuMi's orientation
        % jacobian
        function [J,Jori]=computeJacobianOri(obj,Zd,Ze)
            
@@ -166,7 +166,7 @@ classdef ABB_YUMI<handle
             p=p(1:3);
         end
 
-        % New function to compute the position of joint 6 tip (the origin
+        % New function to compute the position of joint 6 (the origin
         % of link 7 for the pointing task
         function p=computejoint6(obj)
             p0=[0;0;0;1];
