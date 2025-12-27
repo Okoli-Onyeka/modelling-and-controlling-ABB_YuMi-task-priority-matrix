@@ -223,7 +223,7 @@ classdef ABB_YUMI<handle
         end
         
         % Modified: the DH parameters in the transmat function has been
-        % changed to YuMi's DH Parameters
+        % changed to YuMi's DH Parameters. Uses Tbase to set the origin
         function plotarm(obj)
             p0=[0;0;0;1];
             A1=obj.Tbase * obj.transMat(obj.q(1),0,-1,obj.a1,obj.d1);

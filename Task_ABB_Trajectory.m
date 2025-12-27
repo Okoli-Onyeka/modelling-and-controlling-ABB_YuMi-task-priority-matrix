@@ -4,10 +4,24 @@ function [p,dp,ddp] = Task_ABB_Trajectory(t)
 
 cx=0; r=0.2; cy=0.6;
 
+%trying to make the code run more than once, doesnt work yet
+% if t >= (2.2420*2)
+%     t = (2.2420*2);
+% elseif t < (2.2420*2) && t >= (2.2420)
+%     t = 2.2420 - t;
+% end
+% if t >= (2.2420*3)
+%     t = 2.2420*3;
+% elseif t <= (2.2420*3) && t > (2.2420*2)
+%     t = (2.2420*2) - t;
+% elseif t <= (2.2420*2) && t > (2.2420)
+%     t = 2.2420 - t;
+% end
+
 thetai = 0;
 thetaf = 2*pi;
 
-L = r*(thetaf - thetai);   % circumference of the circle
+L = 2 * (r*(thetaf - thetai));   % circumference of the circle
 
 a_max = 1;
 v_max = sqrt(L*a_max);
@@ -56,8 +70,8 @@ ddpx = -r*ux*cos(theta)*(dtheta^2) - r*ux*sin(theta)*ddtheta;
 ddpy = -r*sin(theta)*(dtheta^2)    + r*cos(theta)*ddtheta;
 ddpz = -r*uz*cos(theta)*(dtheta^2) - r*uz*sin(theta)*ddtheta;
 
-p   = [px;py;pz];
-dp  = [dpx;dpy;dpz];
+p = [px;py;pz];
+dp = [dpx;dpy;dpz];
 ddp = [ddpx;ddpy;ddpz];
 
 end

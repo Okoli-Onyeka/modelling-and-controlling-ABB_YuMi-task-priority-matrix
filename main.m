@@ -29,7 +29,7 @@ clear;
 % included to toggle moving obstacles and trajectory planning on or off
 % set to true or false
 movingObs = false;
-trajectoryABB = false;
+trajectoryABB = true;
 
 %changed to  ABB YuMi's link length to variables a1 to a7
 a1 = -0.03;
@@ -61,10 +61,10 @@ global robot
 % robot is now instantiated as an object of class ABB_YUMI
 robot=ABB_YUMI(a1,a2,a3,a4,a5,a6,a7,d1,d3,d5,d7,q1,dq1,Zd);
 
-numberOfObstacles=2;
+numberOfObstacles=0;
 obs = zeros(numberOfObstacles,3);
-obs(1,:)=[-0.0484;0.4121;-0.0484]; % cross the path
-obs(2,:)=[-0.1225;0.7;-0.1225]; % second moving obstacle
+% obs(1,:)=[-0.0484;0.4121;-0.0484]; % cross the path
+% obs(2,:)=[-0.1225;0.7;-0.1225]; % second moving obstacle
 
 
 if movingObs
@@ -75,7 +75,7 @@ end
 
 if trajectoryABB
     T=0.001; %sampling time
-    Ttot = 2.5;
+    Ttot = (2.2420 * 3);
 else
     T=0.001; %sampling time
     Ttot = 6*pi;

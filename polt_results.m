@@ -14,8 +14,8 @@
 clc
 close all
 
-controlPointsMinDistancfile=distanceControlPointsMin;
-controlpointsMinfile=controlPointMin;
+% controlPointsMinDistancfile=distanceControlPointsMin;
+% controlpointsMinfile=controlPointMin;
 eeMinDistancefile=distanceEEMin;
 positiondesiredfile=e0;
 eefile=e0*0;
@@ -24,7 +24,7 @@ qfile=QV;
 qdotfile=dQV;
 qddotfile=ddQV;
 
-controlPointsMinDistancfile(controlPointsMinDistancfile == .11)=-1;
+% controlPointsMinDistancfile(controlPointsMinDistancfile == .11)=-1;
 eeMinDistancefile(eeMinDistancefile == .11)=-1;
 close all
 dt=0.002;
