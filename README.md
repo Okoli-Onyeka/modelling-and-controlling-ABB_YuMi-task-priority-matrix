@@ -1,4 +1,4 @@
-This code has been changed to work on ABB YuMi dual arm robot (left arm).
+This code has been changed by Onyeka Okoli to work on ABB YuMi dual arm robot (left arm).
 
 Matlab scripts correspond to the simulations of the IEEE RA-L article [accepted on 13 Jun 2020]:
 
