@@ -1,4 +1,4 @@
-
+% Modified with ABB_YuMi's DK values 
 %% Calculates the Jacobian for differential kinematics of a Robot
 
 clear all
