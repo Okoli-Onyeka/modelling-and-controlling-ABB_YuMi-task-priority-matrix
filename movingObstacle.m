@@ -1,4 +1,4 @@
-% New function defines a simple back and forth (oscillation) along a line moving obstacles for question 7
+% New function defines simple back and forth (oscillation) moving obstacles along a line
 
 function p = movingObstacle(t, p0)
     % p0 is the initial obstacle position
